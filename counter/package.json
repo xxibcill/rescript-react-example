@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "counter-example",
   "version": "0.0.1",
   "scripts": {
     "build": "rescript && webpack",
