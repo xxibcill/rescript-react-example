@@ -1,4 +1,4 @@
-# ReScript React HEllo World Example
+# Counter using useReducer Example
 
 using official ReScript starter template.
 using webpack webpack-dev-server
