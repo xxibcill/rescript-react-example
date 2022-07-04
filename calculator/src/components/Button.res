@@ -12,7 +12,7 @@ let make = (~children , ~onClick=? ) => {
     "border": "solid 1px #dedede",
     "borderRadius": "4px",
     "&:hover": {
-      "backgroundColor": "#d7d7d7"
+      "backgroundColor": "#d8d8d8"
       "cursor": "pointer"
     }
   })

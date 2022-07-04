@@ -11,7 +11,7 @@ let make = () => {
         "borderRadius": "4px"
     })
 
-    let (state, setState) = React.useState(() => "gg")
+    let (state, setState) = React.useState(() => "0")
 
     <Utils.Provider value={(state, setState)}>
         <div className={container}>
