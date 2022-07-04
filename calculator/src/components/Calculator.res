@@ -1,3 +1,4 @@
+
 @react.component
 let make = () => {
 
@@ -10,8 +11,12 @@ let make = () => {
         "borderRadius": "4px"
     })
 
-    <div className={container}>
-        <DisplayPanel/>
-        <ButtonPanel/>
-    </div>
+    let (state, setState) = React.useState(() => "gg")
+
+    <Utils.Provider value={(state, setState)}>
+        <div className={container}>
+            <DisplayPanel/>
+            <ButtonPanel/>
+        </div>
+    </Utils.Provider>
 }

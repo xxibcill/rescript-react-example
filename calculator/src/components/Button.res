@@ -10,7 +10,11 @@ let make = (~children , ~onClick=? ) => {
     "fontSize": theme.fontSize.large,
     "backgroundColor": theme.pallete.grey,
     "border": "solid 1px #dedede",
-    "borderRadius": "4px"
+    "borderRadius": "4px",
+    "&:hover": {
+      "backgroundColor": "#d7d7d7"
+      "cursor": "pointer"
+    }
   })
 
   <button ?onClick className={style}> children </button>
