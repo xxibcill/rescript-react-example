@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Rescript compiled js
-.bs.js
+*.bs.js
