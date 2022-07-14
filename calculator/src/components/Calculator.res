@@ -1,8 +1,10 @@
+open Utils
 
 @react.component
 let make = () => {
-    
-    let (state, setState) = React.useState(() => "032+20312-30821-38512-390412-38123-59+712-342508+60980967320-952134")
+   
+    // let (state, setState) = React.useState(() => "032+20312-30821-38512-390412-38123-59+712-342508+60980967320-952134")
+    let (state, dispatch) = React.useReducer(calculatorReducer, "0")
 
     let container = Emotion.css({
         "width": "30vh",
@@ -14,10 +16,10 @@ let make = () => {
     })
 
 
-    <Utils.Provider value={(state, setState)}>
+    <CalculatorProvider value={(state, dispatch)}>
         <div className={container}>
             <DisplayPanel/>
             <ButtonPanel/>
         </div>
-    </Utils.Provider>
+    </CalculatorProvider>
 }

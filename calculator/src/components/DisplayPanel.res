@@ -6,12 +6,14 @@ let make = () => {
     let calculateFontSize = (n) => {
         if (n < 5) {
             "60px"
-        } else if (n >= 5 && n < 15) {
-            "30px"
-        } else if (n >= 15 && n < 25) {
-            "20px"
+        } else if (n >= 5 && n < 10) {
+            "45px"
+        } else if (n >= 10 && n < 15) {
+            "35px"
+        } else if (n >= 15 && n < 20) {
+            "25px"
         } else {
-            "15px"
+            "20px"
         }
     }
     let addPxTail = (num) => num -> Js.String2.length -> calculateFontSize
@@ -19,7 +21,6 @@ let make = () => {
     React.useEffect1(() => {
         // Run effects
         setDisplayFontSize(_ => state -> addPxTail )
-        Js.log(displayFontSize)
         None // or Some(() => {})
     }, [state])
 
@@ -33,8 +34,7 @@ let make = () => {
     })
 
     let display = Emotion.css({
-        "width": "auto",
-        "height": "auto",
+        "width": "calc(100% - 40px)",
         "overflowWrap": "break-word",
         "textAlign": "right",
         "fontSize": displayFontSize,
