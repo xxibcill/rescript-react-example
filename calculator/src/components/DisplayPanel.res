@@ -1,5 +1,28 @@
 @react.component
 let make = () => {
+    let (displayFontSize,setDisplayFontSize) = React.useState(_ => "90px")
+    let (state, _) = Utils.useCalculator()
+
+    let calculateFontSize = (n) => {
+        if (n < 5) {
+            "60px"
+        } else if (n >= 5 && n < 15) {
+            "30px"
+        } else if (n >= 15 && n < 25) {
+            "20px"
+        } else {
+            "15px"
+        }
+    }
+    let addPxTail = (num) => num -> Js.String2.length -> calculateFontSize
+
+    React.useEffect1(() => {
+        // Run effects
+        setDisplayFontSize(_ => state -> addPxTail )
+        Js.log(displayFontSize)
+        None // or Some(() => {})
+    }, [state])
+
     let container = Emotion.css({
         "display": "flex",
         "justifyContent": "flex-end",
@@ -14,11 +37,10 @@ let make = () => {
         "height": "auto",
         "overflowWrap": "break-word",
         "textAlign": "right",
-        "fontSize": "35px",
+        "fontSize": displayFontSize,
         "margin": "20px",
     })
 
-    let (state, _) = Utils.useCalculator()
 
     <div className={container}>
         <h1 className={display}>{state -> React.string}</h1>

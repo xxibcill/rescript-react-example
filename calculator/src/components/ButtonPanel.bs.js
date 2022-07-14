@@ -23,141 +23,141 @@ function ButtonPanel(Props) {
             }, React.createElement(Button.make, {
                   children: "AC",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "AC";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "AC";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "<=",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "clear";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "clear";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "%",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "Percentage";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "Percentage";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "÷",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "DIV";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "DIV";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "7",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "7";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "7";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "8",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "8";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "8";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "9",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "9";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "9";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "×",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "MUL";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "MUL";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "4",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "4";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "4";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "5",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "5";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "5";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "6",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "6";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "6";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "-",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "SUB";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "SUB";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "1",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "1";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "1";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "2",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "2";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "2";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "3",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "3";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "3";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "+",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "ADD";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "ADD";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "e",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "EXP";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "EXP";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "0",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "0";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "0";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: ".",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "DEC";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "DEC";
                                   }));
                     })
                 }), React.createElement(Button.make, {
                   children: "=",
                   onClick: (function (param) {
-                      return Curry._1(setState, (function (param) {
-                                    return "EXE";
+                      return Curry._1(setState, (function (x) {
+                                    return x + "EXE";
                                   }));
                     })
                 }));

@@ -1,6 +1,8 @@
 
 @react.component
 let make = () => {
+    
+    let (state, setState) = React.useState(() => "032+20312-30821-38512-390412-38123-59+712-342508+60980967320-952134")
 
     let container = Emotion.css({
         "width": "30vh",
@@ -11,7 +13,6 @@ let make = () => {
         "borderRadius": "4px"
     })
 
-    let (state, setState) = React.useState(() => "0")
 
     <Utils.Provider value={(state, setState)}>
         <div className={container}>
