@@ -1,22 +1,33 @@
-let container = Emotion.css({
-  "width": "100vw",
-  "height": "100vh",
-  "display": "flex",
-  "justifyContent": "center",
-  "alignItems": "center",
-})
+// App.res
+// more infomation https://rescript-lang.org/docs/react/latest/router
 
-let hello = Emotion.css({
-  "color": "#fff",
-  "backgroundColor": "hotpink",
-  "padding": "24px",
-  "fontSize": "24px",
-  "borderRadius": "4px"
-})
-
+// can't go to /about directly
 @react.component
 let make = () => {
-  <div className={container}>
-    <h1 className={hello} >{React.string("Hello World")}</h1>
-  </div>
+  let initialURL = list{}
+  let url = RescriptReactRouter.useUrl()
+
+  let rec len = (myList: list<'a>) =>
+    switch myList {
+    | list{} => 0
+    | list{_, ...tail} => 1 + len(tail)
+  };
+
+
+  let watcher = (url:RescriptReactRouter.url) => {
+    Js.log(len(url.path))
+    Js.log(url)
+
+  }
+
+  let id = RescriptReactRouter.watchUrl(watcher)
+
+
+  Js.log(url)
+  switch url.path {
+    | list{"about",..._} => <About />
+    | list{"content",..._} => <Content />
+    | list{} => <Home/>
+    | _ => <PageNotFound/>
+  }
 }
