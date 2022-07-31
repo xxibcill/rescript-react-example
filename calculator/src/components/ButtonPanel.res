@@ -51,6 +51,6 @@ let make = () => {
         <Button onClick={_ => dispatch(CONCAT("E"))}> {"e" -> React.string} </Button>
         <Button onClick={_ => dispatch(CONCAT("0"))}> {"0" -> React.string} </Button>
         <Button onClick={_ => dispatch(CONCAT("."))}> {"." -> React.string} </Button>
-        <Button onClick={_ => handleClick("EXE")}> {"=" -> React.string} </Button>
+        <Button onClick={_ => dispatch(EVAL)}> {"=" -> React.string} </Button>
     </div>
 }

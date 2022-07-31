@@ -1,5 +1,6 @@
+@module("mathjs") external evaluate: string => float = "evaluate"
 
-type action = CLEAR | BACKSPACE | CONCAT(string)
+type action = CLEAR | BACKSPACE | CONCAT(string) | EVAL
 type contextType = (Js.String2.t, action => unit)
 
 let initialValue:contextType = ("",_ => ())
@@ -19,6 +20,7 @@ let calculatorReducer = (state, action) => {
     | CLEAR => ""
     | BACKSPACE => cutTail(state)
     | CONCAT(str) => handleConcatAction(state,str)
+    | EVAL => evaluate(state) -> Belt.Float.toString
     }
 }
 

@@ -18,12 +18,6 @@ function ButtonPanel(Props) {
       });
   var match = Utils.useCalculator(undefined);
   var dispatch = match[1];
-  var handleClick = function (value) {
-    console.log(value);
-    return Curry._1(dispatch, /* CONCAT */{
-                _0: value
-              });
-  };
   return React.createElement("div", {
               className: container
             }, React.createElement(Button.make, {
@@ -39,7 +33,11 @@ function ButtonPanel(Props) {
                 }), React.createElement(Button.make, {
                   children: "%",
                   onClick: (function (param) {
-                      return handleClick("%");
+                      var value = "%";
+                      console.log(value);
+                      return Curry._1(dispatch, /* CONCAT */{
+                                  _0: value
+                                });
                     })
                 }), React.createElement(Button.make, {
                   children: "÷",
@@ -156,7 +154,7 @@ function ButtonPanel(Props) {
                 }), React.createElement(Button.make, {
                   children: "=",
                   onClick: (function (param) {
-                      return handleClick("EXE");
+                      return Curry._1(dispatch, /* EVAL */2);
                     })
                 }));
 }
