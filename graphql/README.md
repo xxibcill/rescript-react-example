@@ -1,8 +1,12 @@
-# Hello World Example
+# Apollo Graphql Example
 
 using official ReScript starter template.
 using webpack webpack-dev-server
 
+## endpoint
+```
+https://dex-server.herokuapp.com
+```
 ## Installation
 
 ```sh
