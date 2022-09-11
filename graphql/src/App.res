@@ -16,7 +16,9 @@ let hello = Emotion.css({
 
 @react.component
 let make = () => {
-  <div className={container}>
-    <h1 className={hello} >{React.string("Hello World")}</h1>
-  </div>
+  <ApolloClient.React.ApolloProvider client=Apollo.client>
+    <div className={container}>
+      <Query/>
+    </div>
+  </ApolloClient.React.ApolloProvider>
 }

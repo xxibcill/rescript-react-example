@@ -10,7 +10,10 @@
     "in-source": true
   },
   "suffix": ".bs.js",
+  "ppx-flags": ["@reasonml-community/graphql-ppx/ppx"],
   "bs-dependencies": [
+    "rescript-apollo-client",
+    "@reasonml-community/graphql-ppx",
     "@rescript/react"
   ],
   "warnings": {
