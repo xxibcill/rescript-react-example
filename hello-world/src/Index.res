@@ -1,7 +1,7 @@
 
 %%raw("require('./index.css')")
 
-switch(ReactDOM.querySelector("#root")){
-    | Some(root) => ReactDOM.render(<App/>, root)
-    | None => () // do nothing
+switch ReactDOM.querySelector("#root") {
+| Some(container) => ReactDOM.Client.createRoot(container)->ReactDOM.Client.Root.render(<App />)
+| None => ()
 }

@@ -9,6 +9,19 @@ using webpack webpack-dev-server
 npm install
 ```
 
+## Development
+
+```sh
+# install deps
+yarn install
+
+# start rescript compiler
+yarn start
+
+# (in another tab) start development server
+yarn serve
+```
+
 ## Build
 
 - Build: `npm run build`
